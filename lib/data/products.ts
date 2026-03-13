@@ -1,6 +1,15 @@
+/**
+ * Product catalog. Image paths point to public/images/products/.
+ * - To add a product photo: place a file at public/images/products/{slug}.jpg (or .webp), then set
+ *   this product's images[0].src to "/images/products/{slug}.jpg".
+ * - Until then, products use the shared placeholder (see PRODUCT_IMAGE_PLACEHOLDER below).
+ */
 export type ProductCategory = "tshirt-short" | "tshirt-long" | "crewneck";
 
 export type ProductSize = "XS" | "S" | "M" | "L" | "XL" | "2XL";
+
+/** Default image when no product-specific file exists. Replace with /images/products/{slug}.jpg per product. */
+const PRODUCT_IMAGE_PLACEHOLDER = "/images/products/placeholder.svg";
 
 export interface Product {
   id: string;
@@ -28,10 +37,7 @@ export const products: Product[] = [
       "A softly structured short sleeve tee inspired by sunrise walks and calm mornings. Designed for sensory-friendly comfort with smooth seams and a tagless neckline.",
     price: 42,
     images: [
-      {
-        src: "https://placehold.co/800x1000/ffe8d9/2b1b10?text=Hopeful+Horizon+Tee",
-        alt: "Soft short sleeve tee in a warm sunrise gradient, folded neatly on a linen surface."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Soft short sleeve tee in a warm sunrise gradient, folded neatly on a linen surface." },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: ["Sunrise Peach", "Sky Mist"],
@@ -49,10 +55,7 @@ export const products: Product[] = [
       "A minimal front with an affirming back print: 'Different is not less.' Created in collaboration with autistic advocates.",
     price: 44,
     images: [
-      {
-        src: "https://placehold.co/800x1000/e0f2fe/0f172a?text=Soft+Spectrum+Tee",
-        alt: "Light blue spectrum tee with a subtle back print, draped over a chair."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Light blue spectrum tee with a subtle back print, draped over a chair." },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: ["Ocean Mist"],
@@ -70,10 +73,7 @@ export const products: Product[] = [
       "A quiet reminder to center autistic voices, with a small chest embroidery that reads 'Listen first.'",
     price: 46,
     images: [
-      {
-        src: "https://placehold.co/800x1000/fef3c7/1f2933?text=Listen+First+Tee",
-        alt: "Soft sand-colored tee with small 'Listen first' embroidery near the heart."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Soft sand-colored tee with small 'Listen first' embroidery near the heart." },
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     colors: ["Sandstone"],
@@ -91,10 +91,7 @@ export const products: Product[] = [
       "A long sleeve layer for structured days and soft evenings, with thumb-friendly cuffs and a smooth interior finish.",
     price: 58,
     images: [
-      {
-        src: "https://placehold.co/800x1000/e5e7eb/020617?text=Evening+Calm+Long+Sleeve",
-        alt: "Deep ink long sleeve tee folded with sleeves slightly tucked under."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Deep ink long sleeve tee folded with sleeves slightly tucked under." },
     ],
     sizes: ["S", "M", "L", "XL", "2XL"],
     colors: ["Ink Blue"],
@@ -112,10 +109,7 @@ export const products: Product[] = [
       "A grounding long sleeve inspired by quiet forest walks, featuring a minimal sleeve detail honoring neurodiversity.",
     price: 60,
     images: [
-      {
-        src: "https://placehold.co/800x1000/d1fae5/064e3b?text=Night+Forest+Long+Sleeve",
-        alt: "Deep green long sleeve shirt laid flat with subtle sleeve detail."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Deep green long sleeve shirt laid flat with subtle sleeve detail." },
     ],
     sizes: ["S", "M", "L", "XL"],
     colors: ["Forest Green"],
@@ -133,10 +127,7 @@ export const products: Product[] = [
       "Ultra-soft long sleeve with a brushed interior ideal for cooler, low-sensory days and cozy routines.",
     price: 62,
     images: [
-      {
-        src: "https://placehold.co/800x1000/f1f5f9/0f172a?text=Cloud+Layer+Long+Sleeve",
-        alt: "Light grey long sleeve tee stacked on neutral textiles."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Light grey long sleeve tee stacked on neutral textiles." },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: ["Cloud Grey"],
@@ -154,10 +145,7 @@ export const products: Product[] = [
       "A plush crew neck sweater with a subtle jacquard motif symbolizing interconnected support and community care.",
     price: 88,
     images: [
-      {
-        src: "https://placehold.co/800x1000/e2e8f0/020617?text=Embrace+Crew+Sweater",
-        alt: "Stone-colored crew neck sweater folded in layers."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Stone-colored crew neck sweater folded in layers." },
     ],
     sizes: ["S", "M", "L", "XL", "2XL"],
     colors: ["Warm Stone"],
@@ -175,10 +163,7 @@ export const products: Product[] = [
       "A gentle blush crew celebrating the full spectrum of autistic experiences with a small back neck label: 'You belong exactly as you are.'",
     price: 92,
     images: [
-      {
-        src: "https://placehold.co/800x1000/ffe4e6/9f1239?text=Radiant+Thread+Crew",
-        alt: "Soft blush crew neck sweater draped over a sofa."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Soft blush crew neck sweater draped over a sofa." },
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     colors: ["Blush"],
@@ -196,10 +181,7 @@ export const products: Product[] = [
       "A deep blue crew built for recovery days and reset rituals, with softly ribbed cuffs that stay put without squeezing.",
     price: 90,
     images: [
-      {
-        src: "https://placehold.co/800x1000/dbebff/1d3557?text=Harbor+Rest+Crew",
-        alt: "Deep blue crew neck sweater on a minimal hanger."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Deep blue crew neck sweater on a minimal hanger." },
     ],
     sizes: ["S", "M", "L", "XL", "2XL"],
     colors: ["Harbor Blue"],
@@ -218,7 +200,7 @@ export const products: Product[] = [
     price: 32,
     images: [
       {
-        src: "https://placehold.co/800x1000/e0f2fe/0f172a?text=Playful+Echo+Tee+Kids",
+        src: PRODUCT_IMAGE_PLACEHOLDER,
         alt: "Children’s soft blue tee with playful line art, laid flat."
       }
     ],
@@ -238,10 +220,7 @@ export const products: Product[] = [
       "A family-forward tee honoring caregivers, siblings, and broader support networks with gentle typography at the hem.",
     price: 40,
     images: [
-      {
-        src: "https://placehold.co/800x1000/fefce8/1c1917?text=Together+In+This+Tee",
-        alt: "Warm wheat-colored tee with tiny hem text 'Together in this'."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Warm wheat-colored tee with tiny hem text 'Together in this'." },
     ],
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     colors: ["Wheat"],
@@ -259,10 +238,7 @@ export const products: Product[] = [
       "A coordinated crew ideal for team orders, clubs, and advocacy groups, ready to be customized for your community.",
     price: 96,
     images: [
-      {
-        src: "https://placehold.co/800x1000/e5e7eb/020617?text=Orbit+Crew+Set",
-        alt: "Stack of matching navy crew neck sweaters with simple circular motif."
-      }
+      { src: PRODUCT_IMAGE_PLACEHOLDER, alt: "Stack of matching navy crew neck sweaters with simple circular motif." },
     ],
     sizes: ["S", "M", "L", "XL", "2XL"],
     colors: ["Ink Navy"],

@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function FaqPage() {
   return (
-    <div className="container py-12 md:py-16 max-w-3xl space-y-8">
-      <header className="space-y-3">
-        <h1 className="font-display text-2xl md:text-3xl tracking-tight">
+    <div className="container py-section md:py-section-lg max-w-3xl space-y-10">
+      <header className="space-y-4">
+        <h1 className="font-display text-2xl md:text-3xl lg:text-section tracking-tight text-ut-slate">
           Gentle answers to common questions.
         </h1>
-        <p className="text-sm text-ut-muted max-w-prose">
+        <p className="text-base text-ut-muted max-w-prose leading-relaxed">
           If you don&apos;t see your question here, you&apos;re always welcome to reach out.
           We&apos;ll respond with care and as much clarity as we can.
         </p>

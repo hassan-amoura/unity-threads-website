@@ -12,7 +12,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       ref={ref}
       rows={rows}
       className={cn(
-        "flex w-full rounded-lg border border-ut-muted/40 bg-white px-3 py-2 text-sm text-ut-slate transition focus-ring placeholder:text-ut-muted",
+        "flex w-full rounded-boutique border border-ut-muted/30 bg-ut-surface px-4 py-3 text-sm text-ut-slate transition-colors focus-ring focus:border-ut-primary/50 placeholder:text-ut-muted",
         className
       )}
       {...props}

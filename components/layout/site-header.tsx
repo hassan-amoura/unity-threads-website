@@ -3,15 +3,22 @@ import { ReactNode } from "react";
 import { CartPill } from "@/components/layout/cart-pill";
 
 const navLinkClasses =
-  "text-sm font-medium text-ut-slate/80 hover:text-ut-slate focus-ring rounded-full px-3 py-1.5";
+  "text-sm font-medium text-ut-slate/90 hover:text-ut-primary focus-ring rounded-full px-4 py-2 transition-colors duration-200";
 
 export function SiteHeader(): ReactNode {
   return (
-    <header className="border-b border-ut-muted/40 bg-white backdrop-blur">
-      <div className="container flex h-16 items-center justify-between gap-6">
-        <Link href="/" className="flex items-center gap-2 focus-ring rounded-full px-2 py-1">
-          <div className="h-8 w-8 rounded-full bg-ut-primary shadow-soft" aria-hidden="true" />
-          <span className="font-display text-lg tracking-tight text-ut-slate">
+    <header className="border-b border-ut-muted/20 bg-ut-surface/80 backdrop-blur-md">
+      <div className="container flex h-18 min-h-[4.5rem] items-center justify-between gap-8">
+        <Link
+          href="/"
+          className="flex items-center gap-2.5 focus-ring rounded-full px-2 py-2 -ml-2"
+          aria-label="Unity Threads home"
+        >
+          <div
+            className="h-9 w-9 rounded-full bg-ut-primary shadow-soft-sm"
+            aria-hidden="true"
+          />
+          <span className="font-display text-xl tracking-tight text-ut-slate">
             Unity <span className="text-ut-primary">Threads</span>
           </span>
         </Link>
@@ -41,11 +48,10 @@ export function SiteHeader(): ReactNode {
             Contact
           </Link>
         </nav>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <CartPill />
         </div>
       </div>
     </header>
   );
 }
-

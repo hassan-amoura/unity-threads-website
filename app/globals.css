@@ -4,11 +4,14 @@
 
 :root {
   color-scheme: light;
-  /* Modern Studio Blue palette – RGB triplets for Tailwind alpha */
-  --ut-primary: 31 78 121;
-  --ut-bg: 242 239 234;
-  --ut-muted: 107 114 128;
-  --ut-slate: 47 58 64;
+  /* Boutique warm palette – RGB triplets for Tailwind alpha */
+  --ut-primary: 196 114 90;       /* warm coral / terracotta */
+  --ut-secondary: 90 138 124;    /* soft teal / sage */
+  --ut-bg: 250 248 245;          /* cream */
+  --ut-bg-alt: 245 240 232;      /* sand */
+  --ut-surface: 255 252 250;      /* off-white for cards/panels */
+  --ut-muted: 115 108 100;        /* warm gray */
+  --ut-slate: 61 56 52;          /* soft charcoal */
 }
 
 body {
@@ -21,4 +24,13 @@ a {
 
 .focus-ring {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ut-primary focus-visible:ring-offset-2 focus-visible:ring-offset-ut-bg;
+}
+
+/* Prefer reduced motion for transitions */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

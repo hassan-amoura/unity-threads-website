@@ -15,7 +15,7 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-40 flex items-center justify-center bg-black/30 px-4 py-6"
+      className="fixed inset-0 z-40 flex items-center justify-center bg-ut-slate/20 backdrop-blur-sm px-4 py-6"
       role="dialog"
       aria-modal="true"
       aria-label={title}
@@ -23,11 +23,11 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
       <div className="absolute inset-0" onClick={onClose} aria-hidden="true" />
       <div
         className={cn(
-          "relative z-50 w-full max-w-md rounded-2xl border border-ut-muted/30 bg-white p-5 shadow-soft"
+          "relative z-50 w-full max-w-md rounded-boutique-lg bg-ut-surface p-6 shadow-soft border border-ut-muted/10"
         )}
       >
         {title ? (
-          <h2 className="mb-3 text-sm font-semibold tracking-tight text-ut-slate">
+          <h2 className="mb-4 font-display text-lg font-semibold tracking-tight text-ut-slate">
             {title}
           </h2>
         ) : null}
@@ -36,4 +36,3 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
     </div>
   );
 }
-
