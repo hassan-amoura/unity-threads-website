@@ -46,7 +46,7 @@ export default function HomePage() {
     heroImagePath,
     heroLabel,
     heroCtaPrimary,
-    heroCtaSecondary,
+    heroCtaCustom,
     missionImagePath,
     lifestyleImagePath,
     categoryImagePaths,
@@ -82,10 +82,10 @@ export default function HomePage() {
                   {heroCtaPrimary}
                 </Link>
                 <Link
-                  href="/impact"
+                  href="/orders/custom"
                   className="focus-ring inline-flex items-center justify-center rounded-full border-2 border-ut-primary/40 bg-transparent px-8 py-3.5 text-base font-medium text-ut-primary transition-all duration-200 hover:bg-ut-primary/10 hover:border-ut-primary"
                 >
-                  {heroCtaSecondary}
+                  {heroCtaCustom}
                 </Link>
               </div>
             </div>

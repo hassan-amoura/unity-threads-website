@@ -21,6 +21,8 @@ export const siteContent = {
     heroLabel: "Boutique apparel for autism awareness",
     /** Primary CTA text. */
     heroCtaPrimary: "Shop the collection",
+    /** Custom design CTA (links to Custom Orders). */
+    heroCtaCustom: "Create Your Own Design",
     /** Secondary CTA text. */
     heroCtaSecondary: "Learn about our impact",
     /** Advocacy mission section image (two-column block). File in public/images/homepage/ or use hero. */
