@@ -1,30 +1,41 @@
+import Image from "next/image";
 import { typography } from "@/lib/design-tokens";
+import { siteContent } from "@/data/siteContent";
 
 export const metadata = {
   title: "About",
   description:
-    "Learn about Unity Threads, a boutique clothing brand centering autism acceptance, sensory-friendly design, and community care."
+    "Learn about Unity Threads, a boutique clothing brand centering autism acceptance, sensory-friendly design, and community care.",
 };
 
 export default function AboutPage() {
+  const { founderImagePath, founderHeading, founderBody } = siteContent.about;
+
   return (
-    <div className="container py-12 md:py-16 space-y-10">
-      <section className="max-w-3xl space-y-4">
-        <h1 className={typography.heading}>About Unity Threads</h1>
-        <p className={typography.body + " text-ut-muted"}>
-          Unity Threads began as a conversation between caregivers, autistic adults, and designers
-          who were tired of clothing that spoke about autism without listening to autistic people.
-          We set out to build a boutique label where comfort, dignity, and self-expression could
-          live together in every stitch.
-        </p>
-        <p className={typography.body + " text-ut-muted"}>
-          Our pieces are intentionally small-batch and slowly made. We prioritize soft, breathable
-          fabrics, gentle finishes, and silhouettes that feel safe on sensory-sensitive days and
-          special enough for milestone moments. We collaborate with autistic artists, advocates, and
-          families to ensure our designs reflect real stories, not stereotypes.
-        </p>
+    <div className="container py-section md:py-section-lg">
+      <section className="grid gap-10 lg:grid-cols-[1fr_auto] lg:gap-16 lg:items-start">
+        <div className="max-w-3xl space-y-6 order-2 lg:order-1">
+          <h1 className={typography.section}>About Unity Threads</h1>
+          <h2 className="text-lg font-semibold tracking-tight text-ut-slate">
+            {founderHeading}
+          </h2>
+          {founderBody.map((paragraph, i) => (
+            <p key={i} className={typography.body + " text-ut-muted"}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+        <div className="relative w-full aspect-[3/4] max-w-md mx-auto lg:mx-0 lg:max-w-sm lg:flex-shrink-0 order-1 lg:order-2 overflow-hidden rounded-boutique-xl shadow-soft">
+          <Image
+            src={founderImagePath}
+            alt="Unity Threads founder"
+            fill
+            sizes="(min-width: 1024px) 384px, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </section>
     </div>
   );
 }
-

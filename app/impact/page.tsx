@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function ImpactPage() {
   return (
-    <div className="container py-12 md:py-16 space-y-10 max-w-4xl">
+    <div className="container py-section md:py-section-lg space-y-12 max-w-4xl">
       <section className="space-y-4">
-        <h1 className="font-display text-2xl md:text-3xl tracking-tight">
+        <h1 className="font-display text-2xl md:text-3xl lg:text-section tracking-tight text-ut-slate">
           Impact, woven in from the first sketch.
         </h1>
-        <p className="text-sm text-ut-muted max-w-prose">
+        <p className="text-base text-ut-muted max-w-prose leading-relaxed">
           Unity Threads exists because autistic people, families, and advocates asked for clothing
           that speaks with them—not about them. Our impact practice centers autistic leadership,
           community care, and slow, accountable growth.
@@ -72,7 +72,7 @@ export default function ImpactPage() {
           for autistic-led groups and community-based initiatives. This space will highlight
           specific partners, campaigns, and mutual aid funds as they are confirmed.
         </p>
-        <div className="rounded-2xl border border-dashed border-ut-muted/40 bg-white p-4 text-xs text-ut-muted">
+        <div className="rounded-boutique-lg border border-dashed border-ut-muted/30 bg-ut-surface p-5 text-sm text-ut-muted">
           Partner highlight placeholder — reserve this area for logos, short partner stories, and
           transparent notes about how each purchase supports their work.
         </div>

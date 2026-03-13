@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ReactNode } from "react";
+import { DM_Sans, Source_Sans_3 } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ToastViewport } from "@/components/ui/toast";
+
+const fontDisplay = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap"
+});
+const fontBody = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: {
@@ -27,10 +39,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${fontDisplay.variable} ${fontBody.variable}`}>
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
-          <main className="flex-1 bg-gradient-to-b from-ut-bg via-ut-bg to-ut-muted/30">
+          <main className="flex-1">
             {children}
           </main>
           <SiteFooter />

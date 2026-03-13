@@ -36,7 +36,7 @@ export function HeroShowcase() {
   const slide = slides[index];
 
   return (
-    <div className="relative h-80 md:h-[420px] w-full overflow-hidden rounded-[2rem] bg-ut-muted/20 shadow-soft">
+    <div className="relative h-full min-h-[280px] w-full overflow-hidden rounded-boutique-xl bg-ut-muted/20 shadow-soft">
       <div className="absolute inset-0">
         {slides.map((s, i) => (
           <div

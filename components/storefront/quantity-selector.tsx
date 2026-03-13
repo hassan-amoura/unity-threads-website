@@ -23,7 +23,7 @@ export function QuantitySelector({
   };
 
   return (
-    <div className="inline-flex items-center gap-2 rounded-full border border-ut-muted/40 bg-white px-2 py-1">
+    <div className="inline-flex items-center gap-1 rounded-full border border-ut-muted/30 bg-ut-surface px-2 py-1 shadow-soft-sm">
       <Button
         type="button"
         variant="ghost"

@@ -16,13 +16,13 @@ export function Accordion({ items }: AccordionProps) {
   const [openId, setOpenId] = React.useState<string | null>(null);
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {items.map((item) => {
         const isOpen = item.id === openId;
         return (
           <div
             key={item.id}
-            className="rounded-xl border border-ut-muted/30 bg-white p-3 md:p-4"
+            className="rounded-boutique-lg border border-ut-muted/20 bg-ut-surface p-4 shadow-soft-sm"
           >
             <button
               type="button"

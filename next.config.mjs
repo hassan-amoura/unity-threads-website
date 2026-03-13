@@ -2,12 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "placehold.co"
-      }
-    ]
+    // Local images live in public/images/. No remote patterns needed for current content.
   },
   webpack: (config, { dev }) => {
     if (dev) {

@@ -5,21 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-colors focus-ring disabled:pointer-events-none disabled:opacity-60",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium transition-all duration-200 focus-ring disabled:pointer-events-none disabled:opacity-60",
   {
     variants: {
       variant: {
-        default: "bg-ut-primary text-white shadow-soft hover:bg-ut-primary/90",
+        default:
+          "bg-ut-primary text-white shadow-soft-sm hover:bg-ut-primary/90 hover:shadow-soft",
         outline:
-          "border border-ut-primary bg-transparent text-ut-primary hover:bg-ut-primary/5",
-        ghost: "text-ut-slate hover:bg-ut-muted/20",
-        subtle: "bg-ut-muted/20 text-ut-slate hover:bg-ut-muted/30"
+          "border-2 border-ut-primary/50 bg-transparent text-ut-primary hover:bg-ut-primary/10 hover:border-ut-primary",
+        ghost: "text-ut-slate hover:bg-ut-muted/15",
+        subtle: "bg-ut-bg-alt text-ut-slate hover:bg-ut-muted/20"
       },
       size: {
-        default: "h-10 px-5",
+        default: "h-11 px-6",
         sm: "h-9 px-4 text-xs",
-        lg: "h-11 px-6 text-sm",
-        icon: "h-9 w-9"
+        lg: "h-12 px-8 text-base",
+        icon: "h-10 w-10"
       }
     },
     defaultVariants: {
@@ -57,4 +58,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-
